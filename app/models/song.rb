@@ -1,6 +1,7 @@
 class Song < ApplicationRecord
     validates :title, :artist_name, presence: true 
     validates :released, exclusion: { in: [nil] }
+    validates :title, uniqueness: { scope: [:release_year, :artist_name]}
  
 
 
