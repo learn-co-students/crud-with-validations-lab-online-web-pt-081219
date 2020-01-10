@@ -1,0 +1,15 @@
+class Song < ApplicationRecord
+    validates :title, :artist_name, presence: true 
+    validates :released, exclusion: { in: [nil] }
+ 
+
+
+
+    # Title cannot be repeated byt he same artist in the same year 
+    # released must be true or false 
+    # release_year optional if released = false
+    # release_year cannot be blank if released = true 
+    # release_year must be less than or equal to current year
+    
+
+end
