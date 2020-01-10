@@ -1,0 +1,23 @@
+<h1>Songs</h1>
+
+<table>
+    <tr>
+    </tr>
+
+</table>
+
+
+
+
+
+<% @songs.each do |song|%>
+<ul>
+    <li><%= song.title %> - <%= song.artist_name %>
+    <%= link_to "Delete Song", song, method: :delete, data: { confirm: "Are you sure you want to delete this song?" }%></li>
+</ul>
+<% end %>
+
+
+
+
+<%= link_to "Create Song", new_song_path %>

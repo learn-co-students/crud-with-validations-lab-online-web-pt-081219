@@ -4,9 +4,6 @@ class Song < ApplicationRecord
     validates :title, uniqueness: { scope: [:release_year, :artist_name]}
  
 
-
-
-    # Title cannot be repeated byt he same artist in the same year 
     # released must be true or false 
     # release_year optional if released = false
     # release_year cannot be blank if released = true 

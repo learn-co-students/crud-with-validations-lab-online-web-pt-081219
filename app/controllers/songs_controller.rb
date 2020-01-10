@@ -19,7 +19,7 @@ class SongsController < ApplicationController
     end 
 
     def new 
-        Song.new 
+        @song = Song.new
     end 
 
     def create 
@@ -32,7 +32,7 @@ class SongsController < ApplicationController
         end 
     end 
 
-    def destory 
+    def destroy 
         @song.destroy 
         redirect_to songs_path
     end 
