@@ -1,22 +1,22 @@
-<h1>Songs</h1>
+<h1 style="zoom: 150%; color: aqua; background-color: black;">Songs</h1>
 
-<div><%= link_to 'Create Song', new_song_path %></div>
+<div style="background-color: black;"><%= link_to 'Create Song', new_song_path %></div>
 <br />
 
-<table>
-  <thead>
-    <tr>
+<table border="1" style="color: yellow; background-color: black;">
+<thead>
+    <tr style="background-color: red;">
       <th>Title</th>
       <th>Year</th>
       <th>Genre</th>
       <th>Artist name</th>
-      <th></th>
+      <th>Links</th>
     </tr>
   </thead>
 
   <tbody>
     <% @songs.each do |song| %>
-      <tr>
+      <tr style="background-color: green;">
         <td><%= song.title %></td>
         <td><%= song.release_year %></td>
         <td><%= song.genre %></td>
