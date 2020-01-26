@@ -1,0 +1,2 @@
+Song.create(title:"Like a Prayer", released: true, release_year: 1985, artist_name: "Madonna", genre: "pop")
+Song.create(title:"new song", released: true, release_year: 2000, artist_name: "new artist", genre: "rock")
