@@ -1,0 +1,56 @@
+<h1>All songs</h1>
+
+<table>
+    <thead>
+        <tr>
+            <td width=20%>
+                <h4>Artist Name</h4>
+            </td>
+
+            <td width=20%>
+                <h4>Song Title</h4>
+            <td>
+
+            <td width=20%>
+                <h4>Genre</h4>
+            </td>
+
+            <td width=20%>
+                <h4>Released?</h4>
+            </td>
+
+            <td width=20%>
+                <h4>Year Released</h4>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @songs.each do |song| %>
+            <tr>
+                <td>
+                    <%= song.artist_name %>
+                </td>
+
+                <td>
+                    <%= link_to song.title, song_url(song) %>
+                <td>
+
+                <td>
+                    <%= song.genre %>
+                </td>
+
+                <td>
+                    <%= song.released %>
+                </td>
+
+                <td>
+                    <%= song.release_year %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br />
+
+<%= link_to "Add New Song", new_song_url %>
